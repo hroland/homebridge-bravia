@@ -697,7 +697,7 @@ class SonyTV {
         value = 'AAAAAgAAAJcAAAAaAw==';
         break;
       case Characteristic.RemoteKey.INFORMATION:
-        value = 'AAAAAQAAAAEAAAA6Aw==';
+        value = 'AAAAAgAAABoAAABgAw==';
         break;
     }
     var post_data = that.createIRCC(value);
