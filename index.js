@@ -659,6 +659,7 @@ class SonyTV {
         callback(null);
     };
     // https://gist.github.com/joshluongo/51dcfbe5a44ee723dd32
+    // https://pro-bravia.sony.net/develop/integrate/ircc-ip/ircc-codes/
     switch (key) {
       case Characteristic.RemoteKey.REWIND:
         value = 'AAAAAgAAAJcAAAAbAw==';
@@ -694,10 +695,10 @@ class SonyTV {
         value = 'AAAAAQAAAAEAAABjAw==';
         break;
       case Characteristic.RemoteKey.PLAY_PAUSE:
-        value = 'AAAAAgAAAJcAAAAaAw==';
+        value = 'AAAAAQAAAAEAAAAUAw==';
         break;
-      case Characteristic.RemoteKey.INFORMATION:
-        value = 'AAAAAgAAABoAAABhAw==';
+      case Characteristic.RemoteKey.INFORMATION: // https://pro-bravia.sony.net/develop/integrate/ircc-ip/ircc-codes/
+        value = 'AAAAAgAAAJcAAAA2Aw==';
         break;
     }
     var post_data = that.createIRCC(value);
